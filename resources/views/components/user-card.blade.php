@@ -21,6 +21,9 @@
                             {{__('Profile')}}
                         </a>
                     </li>
+                    @isset($lista)
+                    {{ $lista }}
+                    @endisset
                     <hr class="">
                     <li class="font-medium">
                         <form action="#" method="POST" class="flex items-center transform transition-colors duration-200 border-r-4 border-transparent hover:border-red-600" >

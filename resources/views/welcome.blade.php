@@ -8,7 +8,7 @@
         <hr class="my-4">
         <h4 class="text-xl text-center py-4">LOGIN</h4>
         <div>
-            <x-card color="gray" class="bg-gray-800">
+            <x-card color="gray" class="bg-gray-800 shadow-xl shadow-indigo-900">
                 <x-slot name="content">
                     <h4 class="mb-4 text-4xl text-gray-600 font-bold uppercase text-center">
                         Login
@@ -20,7 +20,7 @@
                         </div>
                         <div>
                             <label class="text-gray-400 font-bold">Password</label>
-                            <x-input type="password" class="border-gray-500 focus:ring-0" placeholder="..."  />
+                            <x-input type="password" class="border-gray-500 focus:ring-0" placeholder="....."  />
                         </div>
                         <div class="text-gray-400 font-bold">
                             <label class="flex items-center">
@@ -56,7 +56,7 @@
         {{-- DATA TABLE --}}
         <h4 class="text-xl text-center py-4">Data table</h4>
         <div>
-            <x-table :data="$data">
+            <x-table :data="$data" color="bg-blue-800">
                 <x-slot name="thead">
                     <x-th sort="id" text="no" />
                     <x-th sort="name" text="nombre" /> 

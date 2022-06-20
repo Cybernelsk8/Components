@@ -4,6 +4,41 @@
             <h1 class="text-center text-3xl font-bold">COMPLEMENTOS QUE SE PUEDEN USAR</h1>
         </div>
 
+        {{-- LOGIN --}}
+        <hr class="my-4">
+        <h4 class="text-xl text-center py-4">LOGIN</h4>
+        <div>
+            <x-card color="gray" class="bg-gray-800">
+                <x-slot name="content">
+                    <h4 class="mb-4 text-4xl text-gray-600 font-bold uppercase text-center">
+                        Login
+                    </h4>
+                    <form action="#">
+                        <div>
+                            <label class="text-gray-400 font-bold">Email</label>
+                            <x-input type="text" class="border-gray-500 focus:ring-0" placeholder="example@example.com"  />
+                        </div>
+                        <div>
+                            <label class="text-gray-400 font-bold">Password</label>
+                            <x-input type="password" class="border-gray-500 focus:ring-0" placeholder="..."  />
+                        </div>
+                        <div class="text-gray-400 font-bold">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="mr-2 border-2">
+                                Recordar sesión
+                            </label>
+                            <a href="#">¿Olvidaste la contraseña ?</a>
+                        </div>
+                        <div class="flex justify-center mt-4">
+                            <x-button text="Login" class="bg-gray-500 w-full text-gray-200 border-gray-800 text-left" />
+                        </div>
+                    </form>
+                    
+                </x-slot>
+¿¿
+            </x-card>
+        </div>
+
         {{-- NAVBAR --}}
         <hr class="my-4">
         <h4 class="text-xl text-center py-4">Navbar</h4>
@@ -304,7 +339,10 @@
                     Aqui puede ir un pie de pagina si se decea
                 </x-slot>
             </x-card>
-        </div>  
+        </div> 
+        
+        
+
     </div>
 
 
@@ -332,6 +370,11 @@
     <div class="border-indigo-600">
         <div class="bg-indigo-400">
             <div class="bg-indigo-100"></div>
+        </div>
+    </div>
+    <div class="border-gray-600">
+        <div class="bg-gray-400">
+            <div class="bg-gray-100"></div>
         </div>
     </div>
 

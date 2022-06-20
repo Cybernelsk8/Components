@@ -10,4 +10,4 @@ if (mix.inProduction()) {
 mix.version();
 }
 
-mix.browserSync('http://nuevo.test');
+mix.browserSync('http://Components.test');

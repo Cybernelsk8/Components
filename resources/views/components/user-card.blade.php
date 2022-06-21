@@ -1,7 +1,7 @@
 
 <div class="flex justify-center items-center pr-4">
     <div x-data="{ open: false }" class="flex justify-center items-center">
-        <div @click="open = !open" class="relative border-b-4 border-transparent py-3 w-52 transform hover:scale-110" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100">
+        <div @click="open = !open" class="relative border-b-4 border-transparent py-3 w-52" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100">
             <div class="flex justify-end items-center space-x-3 cursor-pointer">
                 <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-gray-300">
                     <img src="https://ui-avatars.com/api/?name=Nelson Vasquez&color=7F9CF5&background=EBF4FF" alt="" class="w-full h-full object-cover">

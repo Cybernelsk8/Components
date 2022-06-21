@@ -17,7 +17,7 @@
                         @csrf
                         <div>
                             <label class="text-gray-400 font-bold">Email</label>
-                            <x-input name="user"  class="border-gray-500 focus:ring-0" placeholder="example@example.com"  />
+                            <x-input name="user" class="border-gray-500 focus:ring-0" placeholder="example@example.com"  />
                         </div>
                         <div>
                             <label class="text-gray-400 font-bold">Password</label>

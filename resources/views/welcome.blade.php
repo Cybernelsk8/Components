@@ -17,11 +17,23 @@
                         @csrf
                         <div>
                             <label class="text-gray-400 font-bold">Email</label>
-                            <x-input name="user" class="border-gray-500 focus:ring-0" placeholder="example@example.com"  />
+                            <x-input name="user" color="border-indigo-500" placeholder="example@example.com">
+                                <x-slot name="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                      </svg>
+                                </x-slot>
+                            </x-input>
                         </div>
                         <div>
                             <label class="text-gray-400 font-bold">Password</label>
-                            <x-input name="pass" type="password" class="border-gray-500 focus:ring-0" placeholder="....."  />
+                            <x-input name="pass" type="password" color="border-indigo-500" placeholder="....."  >
+                                <x-slot name="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                                      </svg>
+                                </x-slot>
+                            </x-input>
                         </div>
                         <div class="text-gray-400 font-bold">
                             <label class="flex items-center">
@@ -150,9 +162,9 @@
                 </div>
                 <div>
                     <label>Etiqueta del campo</label>
-                    <x-input class="focus:ring-red-500 focus:border-red-500 border-green-500" placeholder="Aqui el texto cualquiera"  />
+                    <x-input class="border-green-500" placeholder="Aqui el texto cualquiera"  />
                 </div>
-                <x-input type="text" class="focus:ring-lime-500 focus:border-lime-500 border-red-500" placeholder="Aqui el texto cualquiera"  />
+                <x-input type="text" class="border-red-500" placeholder="Aqui el texto cualquiera"  />
                 <x-input-search placeholder="Buscar ...." />
             </div>
         </div>

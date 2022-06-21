@@ -1,2 +1,2 @@
-
-<input type="{{ $type }}" {{ $attributes->merge(['class'=>'border-2 h-10 px-2 py-1 w-full rounded-lg focus:outline-none','placeholder'=>$placeholder]) }}>
+@props(['type'=>'text','name'=>''])
+<input type="{{ $type }}" name="{{ $name }}" {{ $attributes->merge(['class'=>'border-2 h-10 px-2 py-1 w-full rounded-lg focus:outline-none '.($errors->has($name) ? ' border-red-500':'')]) }}>

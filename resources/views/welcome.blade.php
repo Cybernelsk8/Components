@@ -6,21 +6,22 @@
 
         {{-- LOGIN --}}
         <hr class="my-4">
-        <h4 class="text-xl text-center py-4">LOGIN</h4>
+        <h4 class="text-xl text-center py-4">Login</h4>
         <div>
             <x-card color="gray" class="bg-gray-800 shadow-xl shadow-indigo-900">
                 <x-slot name="content">
                     <h4 class="mb-4 text-4xl text-gray-600 font-bold uppercase text-center">
                         Login
                     </h4>
-                    <form action="#">
+                    <form action="{{ route('prueba') }}" method="POST">
+                        @csrf
                         <div>
                             <label class="text-gray-400 font-bold">Email</label>
-                            <x-input type="text" class="border-gray-500 focus:ring-0" placeholder="example@example.com"  />
+                            <x-input name="user"  class="border-gray-500 focus:ring-0" placeholder="example@example.com"  />
                         </div>
                         <div>
                             <label class="text-gray-400 font-bold">Password</label>
-                            <x-input type="password" class="border-gray-500 focus:ring-0" placeholder="....."  />
+                            <x-input name="pass" type="password" class="border-gray-500 focus:ring-0" placeholder="....."  />
                         </div>
                         <div class="text-gray-400 font-bold">
                             <label class="flex items-center">
@@ -29,13 +30,15 @@
                             </label>
                             <a href="#">¿Olvidaste la contraseña ?</a>
                         </div>
+                        <div class="text-center">
+                            <x-errors-validate />
+                        </div>
                         <div class="flex justify-center mt-4">
-                            <x-button text="Login" class="bg-gray-500 w-full text-gray-200 border-gray-800 text-left" />
+                            <x-button type="submit" text="Login" class="bg-gray-500 w-full text-gray-200 border-gray-800 text-left" />
                         </div>
                     </form>
                     
                 </x-slot>
-¿¿
             </x-card>
         </div>
 
@@ -143,11 +146,11 @@
             <div class="grid grid-cols-2 gap-3 ">
                 <div>
                     <label>Etiqueta del campo</label>
-                    <x-input type="text" class="border-blue-500" placeholder="Aqui el texto cualquiera"  />
+                    <x-input class="border-blue-500" placeholder="Aqui el texto cualquiera"  />
                 </div>
                 <div>
                     <label>Etiqueta del campo</label>
-                    <x-input type="text" class="focus:ring-red-500 focus:border-red-500 border-green-500" placeholder="Aqui el texto cualquiera"  />
+                    <x-input class="focus:ring-red-500 focus:border-red-500 border-green-500" placeholder="Aqui el texto cualquiera"  />
                 </div>
                 <x-input type="text" class="focus:ring-lime-500 focus:border-lime-500 border-red-500" placeholder="Aqui el texto cualquiera"  />
                 <x-input-search placeholder="Buscar ...." />

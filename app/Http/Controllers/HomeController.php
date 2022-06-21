@@ -12,4 +12,14 @@ class HomeController extends Controller
         $data = User::all();
         return view('welcome',compact('data'));
     }
+
+    public function prueba(Request $request)
+    {
+        $this->validate($request,[
+            'user'=>'required|email',
+            'pass'=>'required',
+        ]);
+
+        return $request->all();
+    }
 }

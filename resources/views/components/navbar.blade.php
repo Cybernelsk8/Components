@@ -14,7 +14,7 @@
     </a> --}}
     <div>
             {{-- @auth --}}
-                <x-user-card class="text-gray-300" />
+                <x-user-card class="text-gray-300" name="Nelson Vásquez" />
             {{-- @else
                 <div class="flex justify-center items-center">
                     <div class="flex justify-center items-center mr-3">

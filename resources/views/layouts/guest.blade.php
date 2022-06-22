@@ -9,10 +9,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- Fonts -->
@@ -23,16 +19,18 @@
 
     @livewireStyles
 </head>
-<body class="font-sans antialiased">
-    
-    <div class="min-h-screen lg:flex lg:justify-center">
-        <div>
-            {{ $slot }}
-        </div>
-    </div>
-    
+<body>
+        
+    <x-container>
+        {{ $slot }}
+    </x-container>
+
     @stack('modals')
     @livewireScripts
+    
+    @isset($js)
+        {{ $js }}
+    @endisset
     
 </body>
 </html>

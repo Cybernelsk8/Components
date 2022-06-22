@@ -164,7 +164,13 @@
                     <x-input class="border-green-500" placeholder="Aqui el texto cualquiera"  />
                 </div>
                 <x-input type="text" class="border-red-500" placeholder="Aqui el texto cualquiera"  />
-                <x-input-search placeholder="Buscar ...." />
+                <x-input placeholder="Buscar ....">
+                    <x-slot name="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                          </svg>
+                    </x-slot>
+                </x-input>
             </div>
         </div>
 

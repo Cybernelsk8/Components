@@ -270,12 +270,46 @@
 
         {{-- SPIN --}}
         <hr class="my-4">
-        <h4 class="text-xl text-center py-4">Spin y barra de progreso</h4>
+        <h4 class="text-xl text-center py-4">Spin, Ping, Pulce, Bounce y Barras de progreso</h4>
         <div class="flex justify-center mb-4">
             <x-spin class="border-t-red-500"/>
             <x-spin class=" border-x-lime-500"/>
             <x-spin class="border-t-green-500 border-x-green-500"/>
             <x-spin class="border-t-orange-500 border-4 h-14 w-14" />
+        </div>
+
+        {{-- PULSE --}}
+        <div class="flex justify-center mb-4 space-x-2">
+            <x-ping color="sky" size="3" />
+            <x-ping color="blue" size="3" />
+            <x-ping color="red" size="3" />
+            <x-ping color="indigo" size="3" />
+            <x-ping color="lime" size="3" />
+            <x-ping color="gray" size="3" />
+        </div>
+
+        <div class="flex justify-center mb-4 space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z" />
+              </svg>
+        </div>
+
+        <div class="flex justify-center mb-4 space-x-2">
+            <div class="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
+                <div class="animate-pulse flex space-x-4">
+                  <div class="rounded-full bg-slate-200 h-10 w-10"></div>
+                  <div class="flex-1 space-y-6 py-1">
+                    <div class="h-2 bg-slate-200 rounded"></div>
+                    <div class="space-y-3">
+                      <div class="grid grid-cols-3 gap-4">
+                        <div class="h-2 bg-slate-200 rounded col-span-2"></div>
+                        <div class="h-2 bg-slate-200 rounded col-span-1"></div>
+                      </div>
+                      <div class="h-2 bg-slate-200 rounded"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </div>
 
         {{-- BARRA DE PROGRESO --}}
@@ -398,9 +432,7 @@
                 </x-slot>
             </x-card>
         </div> 
-        
-        
-
+    
     </div>
 
 

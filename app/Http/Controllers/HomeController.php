@@ -10,7 +10,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $data = User::all();
+        $data = User::select('id','name','email')
+                    ->get();
         return view('welcome',compact('data'));
     }
 
@@ -21,6 +22,7 @@ class HomeController extends Controller
             'pass'=>'required',
         ]);
 
-        return $request->all();
+        return redirect()->back()->with('info','Excelente todo esta bién');
+
     }
 }

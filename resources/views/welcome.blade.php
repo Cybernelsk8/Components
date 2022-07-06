@@ -8,6 +8,25 @@
         <hr class="my-4">
         <h4 class="text-xl text-center py-4">Login</h4>
         <div>
+            @if (session('info'))
+            <x-toast-alert text="{{ session('info') }}" class="bg-green-500 text-green-700 border-green-600 shadow-green-800 ">
+                <x-slot name="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </x-slot>
+            </x-toast-alert>
+            @endif
+
+            @if ($errors->any())
+                <x-toast-alert text="Este es el mensaje de error" class="absolute bg-red-500 text-red-700 border-red-600 shadow-red-800">
+                    <x-slot name="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                    </x-slot>
+                </x-toast-alert>
+            @endif
             <x-card color="gray" class="bg-gray-800 shadow-xl shadow-indigo-900">
                 <x-slot name="content">
                     <h4 class="mb-4 text-4xl text-gray-600 font-bold uppercase text-center">
@@ -268,18 +287,8 @@
         {{-- ALERTAS --}}
         <hr class="my-4">
         <h4 class="text-xl text-center py-4">ALERTAS</h4>
-        <div x-data="{
-            open:true,
-            get prueba(){
-
-                setInterval(()=>{
-                    this.open=true;
-                    setTimeout(()=>this.open=false,3000)
-                },5000)
-                
-            }
-        }" x-init="prueba">
-            <x-alert text="Aqui va el mensaje que yo quiera" class="bg-lime-500 w-96 border-lime-800 shadow-lime-500">
+        <div x-data="{open:true}">
+            <x-alert text="Aqui va el mensaje que yo quiera" class="bg-lime-500 w-96 border-lime-800 shadow-lime-500 text-lime-700">
                 <x-slot name="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

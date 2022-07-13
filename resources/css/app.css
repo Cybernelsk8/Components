@@ -13,3 +13,7 @@
 .has-tooltip:hover .tooltip {
     @apply visible z-50;
 }
+
+td{
+    @apply px-4 py-2 whitespace-nowrap text-gray-500;
+}

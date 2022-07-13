@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $data = User::select('id','name','email')
+        $data = DB::table('tks_tickets')
                     ->get();
         return view('welcome',compact('data'));
     }

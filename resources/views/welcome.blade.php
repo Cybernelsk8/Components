@@ -46,7 +46,7 @@
                         </div>
                         <div>
                             <label class="text-gray-400 font-bold">Password</label>
-                            <x-input name="pass" type="password" color="border-indigo-500" placeholder="....."  >
+                            <x-input name="pass" type="password" color="border-indigo-500" placeholder="Password"  >
                                 <x-slot name="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
@@ -87,23 +87,25 @@
          </div>
         
         {{-- DATA TABLE --}}
-        <h4 class="text-xl text-center py-4">Data table</h4>
+        <h4 class="text-xl text-center py-4">Data table ALPINE JS</h4>
         <div>
-            <x-table :data="$data" color="bg-blue-800">
+            {{-- <x-data-table :data="$data" color="bg-blue-500">
                 <x-slot name="thead">
                     <x-th sort="id" text="no" />
                     <x-th sort="name" text="nombre" /> 
-                    <x-th sort="email" text="correo" />      
-                    <th width="10" class="th text-gray-500">
+                    <x-th sort="email" text="correo" />  
+                    <x-th sort="dt" text="fecha creacion" />      
+                    <th width="10" class="th text-gray-200">
                         Acciones
                     </th>    
                 </x-slot>
                 <x-slot name="tbody">
                     <tr class="hover:bg-gray-100 text-xs">
-                        <td x-text="item.id" class="px-4 py-2  whitespace-nowrap  text-gray-500"></td>
-                        <td x-text="item.name" class="px-2 py-2  whitespace-nowrap  text-gray-500"></td>
-                        <td x-text="item.email" class="px-2 py-2  whitespace-nowrap  text-gray-500"></td>
-                        <td width="10" class="px-4 py-2  whitespace-nowrap  text-gray-500">
+                        <td x-text="item.id" ></td>
+                        <td x-text="item.name.toUpperCase()"></td>
+                        <td x-text="item.email"></td>
+                        <td x-text="item.dt"></td>
+                        <td width="10">
                             <div class="flex space-x-2">
                                 <button class="transform hover:scale-110">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -119,40 +121,12 @@
                         </td>
                     </tr>
                 </x-slot>
-            </x-table>
+            </x-data-table> --}}
 
-            <x-table :data="$data" show="hidden" color="bg-gray-800">
-                <x-slot name="thead">
-                    <x-th sort="id" text="no" />
-                    <x-th sort="name" text="nombre" /> 
-                    <x-th sort="email" text="correo" />      
-                    <th width="10" class="th text-gray-500">
-                        Acciones
-                    </th>    
-                </x-slot>
-                <x-slot name="tbody">
-                    <tr class="hover:bg-gray-100 text-xs">
-                        <td x-text="item.id" class="px-4 py-2  whitespace-nowrap  text-gray-500"></td>
-                        <td x-text="item.name" class="px-2 py-2  whitespace-nowrap  text-gray-500"></td>
-                        <td x-text="item.email" class="px-2 py-2  whitespace-nowrap  text-gray-500"></td>
-                        <td width="10" class="px-4 py-2  whitespace-nowrap  text-gray-500">
-                            <div class="flex space-x-2">
-                                <button class="transform hover:scale-110">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                                      </svg>
-                                </button>
-                                <button class="transform hover:scale-110">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                                      </svg>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                </x-slot>
-            </x-table>
+            <livewire:tabla />
         </div>
+
+        
 
         {{-- USER CARD --}}
         <hr class="my-4">
@@ -448,6 +422,7 @@
     <div class="border-red-600">
         <div class="bg-red-400">
             <div class="bg-red-100"></div>
+            <div class="bg-red-500"></div>
         </div>
     </div>
 
@@ -457,12 +432,12 @@
         </div>
     </div>
 
-    <div class="border-indigo-600">
+    <div class="border-indigo-600 bg-indigo-500">
         <div class="bg-indigo-400">
             <div class="bg-indigo-100"></div>
         </div>
     </div>
-    <div class="border-gray-600">
+    <div class="border-gray-600 bg-gray-500">
         <div class="bg-gray-400">
             <div class="bg-gray-100"></div>
         </div>
